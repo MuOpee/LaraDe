@@ -50,33 +50,37 @@
     <link rel="stylesheet" href="All-inOne.css">
 </head>
 <body>
-    <div class="container" align="center">
-        <form onsubmit="sendEmail(); reset(); return false;">
-            <h3>Order Your Service</h3>
-            <input type="text" id="name" Placeholder="Your Name" required>
-            <input type="email" id="email" placeholder="Email ID" required>
-            <input type="text" id="phone" placeholder="Phone No." required>
-            <textarea id="message" rows="4" placeholder="Tell us about your desired service." required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </div>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-        function sendEmail(){
-            Email.send({
-    Host : "smtp.gmail.com",
-    Username : "mujahidopee@gmail.com",
-    Password : "143Richa",
-    To : 'mujahidopee773@gmail.com',
-    From : document.getElementById("email").value,
-    Subject : "Service Order",
-    Body : "Name: " + document.getElementById("name").value
-                + "<br> Email: " + document.getElementById("email").value
-                + "<br> Phone No: " + document.getElementById("phone").value
-                + "<br> Message: " + document.getElementById("message").value
-}).then(
-  message => alert("Your messege sent successfully, now chill and take forever living products for your health")
-);
-    </script>
+<form id="form">
+  <div class="field">
+      <h3>Order Your Desired Service</h3>
+    <label for="name">name</label>
+    <input type="text" name="name" id="name">
+  </div>
+  <div class="field">
+    <label for="email">email</label>
+    <input type="text" name="email" id="email">
+  </div>
+  <div class="field">
+    <label for="phone">phone</label>
+    <input type="text" name="phone" id="phone">
+  </div>
+  <div class="field">
+    <label for="message">message</label>
+    <input type="text" raws="4" name="message" id="message">
+  </div>
+  <div class="field">
+    <label for="Name">Name</label>
+    <input type="text" name="Name" id="Name">
+  </div>
+
+  <input type="submit" id="button" value="Send Email" >
+</form>
+
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('SxD0It3OD8nFm_Ype')
+</script>
 </body>
 </html>
