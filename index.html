@@ -50,7 +50,7 @@
     <link rel="stylesheet" href="All-inOne.css">
 </head>
 <body>
-<form id="form">
+<form align =="center" id="form">
   <div class="field">
       <h3>Order Your Desired Service</h3>
     <label for="name">name</label>
@@ -81,6 +81,26 @@
 
 <script type="text/javascript">
   emailjs.init('SxD0It3OD8nFm_Ype')
+    const btn = document.getElementById('button');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_67v3aqe';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Sent!');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+});
 </script>
 </body>
 </html>
