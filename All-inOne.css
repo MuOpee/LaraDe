@@ -21,7 +21,52 @@ img {
     height: auto;
     align: center;
 }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
 
+th, td {
+    border: 2px solid blue;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: red;
+    font-weight: bold;
+}
+
+/* styles.css */
+
+.her-div {
+    background-color: cyan; /* Set your desired color here */
+    padding: 20px;
+    text-align: left;
+    font-size: 18px;
+    color: black;
+}
+
+/* styles.css */
+
+.his-div {
+    background-color: naviblue; /* Set your desired color here */
+    padding: 20px;
+    text-align: right;
+    font-size: 18px;
+    color: white;
+}
+
+/* styles.css */
+
+.fuck-div {
+    background-color: orange; /* Set your desired color here */
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    color: black;
+}
 h1 {
     color: powderblue;
 }
