@@ -202,9 +202,9 @@ input, textarea {
     margin-bottom: 10px;
 }
 
-input[type="submit"] {
+button {
     display: block;
-    padding: 15px;
+    padding: 15px 25px;
     Background: orange;
     color: black;
     font-size: 18px;
