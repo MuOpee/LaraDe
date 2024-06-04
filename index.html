@@ -52,20 +52,24 @@
 <body>
             <div align="center" class="container">
             <h3>Contact to Order</h3>
-            <form id="form">
-                <input type="text" id="name" placeholder="Full Name" required>
-                <input type="email" id="email" placeholder="Email Id" required>
-                <input type="tel" id="phone" placeholder="Phone No." required>
-                <textarea id="message" placeholder="Service You Desire" rows="4" required></textarea>
-                <button type="submit" id="button" value="Send Email">Send Email</button>
-            </form>
-        </div>
-    <script type="text/javascript"
+<form id="form">
+    <label for="name">name</label>
+    <input type="text" name="name" id="name">
+    <label for="email">email</label>
+    <input type="text" name="email" id="email">
+    <label for="phone">phone</label>
+    <input type="text" name="phone" id="phone">
+    <label for="message">message</label>
+    <input type="text" name="message" id="message" rows="4">
+
+  <button type="submit" id="button" value="Send Email" >Send</button>
+</form></div>
+<script type="text/javascript"
   src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 <script type="text/javascript">
   emailjs.init('SxD0It3OD8nFm_Ype')
-    const btn = document.getElementById('button');
+const btn = document.getElementById('button');
 
 document.getElementById('form')
  .addEventListener('submit', function(event) {
