@@ -52,12 +52,12 @@
 <body>
             <div align="center" class="container">
             <h3>Contact to Order</h3>
-            <form id="contact-form">
+            <form id="form">
                 <input type="text" id="name" placeholder="Full Name" required>
                 <input type="email" id="email" placeholder="Email Id" required>
                 <input type="tel" id="phone" placeholder="Phone No." required>
                 <textarea id="message" placeholder="Service You Desire" rows="4" required></textarea>
-                <button type="submit">Send Email</button>
+                <button type="submit" id="button" value="Send Email">Send Email</button>
             </form>
         </div>
     <script type="text/javascript"
@@ -67,7 +67,7 @@
   emailjs.init('SxD0It3OD8nFm_Ype')
     const btn = document.getElementById('button');
 
-document.getElementById('contact-form')
+document.getElementById('form')
  .addEventListener('submit', function(event) {
    event.preventDefault();
 
@@ -79,7 +79,7 @@ document.getElementById('contact-form')
    emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
       btn.value = 'Send Email';
-      alert('Sent!');
+      alert('Your message is delivered. Now seat tight and wait for our reply!');
     }, (err) => {
       btn.value = 'Send Email';
       alert(JSON.stringify(err));
