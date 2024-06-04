@@ -9,7 +9,7 @@
 }
 /* Set the background image for the body */
 body {
-    background-color: powderblue;
+    background-color: black;
     background-repeat: repeat;
     background-size: cover;
     font-family: 'Times New Roman', Times, serif;
@@ -61,7 +61,7 @@ th {
 /* styles.css */
 
 .fuck-div {
-    background-color: orange; /* Set your desired color here */
+    background-color: transparent; /* Set your desired color here */
     padding: 20px;
     text-align: center;
     font-size: 18px;
