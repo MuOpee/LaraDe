@@ -50,31 +50,16 @@
     <link rel="stylesheet" href="All-inOne.css">
 </head>
 <body>
-<form align ="center" id="form">
-  <div class="field">
+<div class="container" align="center">
+    <form>
       <h3>Order Your Desired Service</h3>
-    <label for="name">Full Name</label>
-    <input type="text" name="name" id="name">
-  </div>
-  <div class="field">
-    <label for="email">Email Id</label>
-    <input type="text" name="email" id="email">
-  </div>
-  <div class="field">
-    <label for="phone">Phone No.</label>
-    <input type="text" name="phone" id="phone">
-  </div>
-  <div class="field">
-    <label for="message">Service Type</label>
-    <input type="text" name="message" id="message">
-  </div>
-  <div class="field">
-    <label for="Name">Message</label>
-    <input type="text" name="message" id="message">
-  </div>
-
-  <input type="submit" id="button" value="Send Email" >
+    <input type="text" name="name" id="name" placeholder="Full Name" required>
+    <input type="text" name="email" id="email" placeholder="Email Id" required>
+    <input type="text" name="phone" id="phone" placeholder="Phone No" Required>
+    <textarea type="text" name="message" id="message" placeholder="Your Desired Service" rows="4">
+    <input type="submit" id="button" value="Send Email" >
 </form>
+    </div>
 
 <script type="text/javascript"
   src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
