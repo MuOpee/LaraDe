@@ -60,32 +60,31 @@
                 <button type="submit">Send</button>
             </form>
         </div>
-    
     <script type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    
-    <script type="text/javascript">
-      emailjs.init('SxD0It3OD8nFm_Ype')
-      const btn = document.getElementById('button');
-    
-    document.getElementById('form')
-     .addEventListener('submit', function(event) {
-       event.preventDefault();
-    
-       btn.value = 'Sending...';
-    
-       const serviceID = 'default_service';
-       const templateID = 'template_67v3aqe';
-    
-       emailjs.sendForm(serviceID, templateID, this)
-        .then(() => {
-          btn.value = 'Send Email';
-          alert('The message is delivered, you will soon recieve our email or whatsapp text. Thank You');
-        }, (err) => {
-          btn.value = 'Send Email';
-          alert(JSON.stringify(err));
-        });
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('SxD0It3OD8nFm_Ype')
+    const btn = document.getElementById('button');
+
+document.getElementById('contact-form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_67v3aqe';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Sent!');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
     });
-    </script>
+});
+</script>
 </body>
 </html>
