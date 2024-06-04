@@ -9,7 +9,7 @@
 }
 /* Set the background image for the body */
 body {
-    background-color: black;
+    background-image: src='Images/bg.png';
     background-repeat: repeat;
     background-size: cover;
     font-family: 'Times New Roman', Times, serif;
@@ -22,7 +22,7 @@ img {
     align: center;
 }
 table {
-    width: 90%;
+    width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
     align: center;
@@ -45,7 +45,7 @@ th {
 /* styles.css */
 
 .her-div {
-    background-color: cyan; /* Set your desired color here */
+    background-color: transparent; /* Set your desired color here */
     padding: 20px;
     text-align: left;
     font-size: 18px;
@@ -55,7 +55,7 @@ th {
 /* styles.css */
 
 .his-div {
-    background-color: naviblue; /* Set your desired color here */
+    background-color: transparent; /* Set your desired color here */
     padding: 20px;
     text-align: right;
     font-size: 18px;
